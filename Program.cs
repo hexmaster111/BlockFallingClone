@@ -37,6 +37,8 @@ internal class Program
             deltaTime = currentTime - lastTime;
             if (deltaTime < 1000 / 60)
             {
+                var sleepTime = (1000 / 60) - deltaTime;
+                Thread.Sleep((int)sleepTime);
                 continue;
             }
 
